@@ -6,7 +6,7 @@ const Hero = () => {
         <div className="flex flex-col gap-2 px-4">
             <h1 className="text-blue-100 font text-xl font-medium">Wemsc - Music Streaming Desktop App (Dark Mode)</h1>
             <div className="flex gap-4">
-                <Image src="/profile.png" width={40} height={40} alt="Profile" className="rounded-full h-12 w-12" />
+                <Image src="/profile.webp" width={40} height={40} alt="Profile" className="rounded-full h-12 w-12" />
                 <div className="flex flex-col h-full text-sm justify-items-center gap-2">
                     <p>Nailul Izah</p>
                     <p>Follow</p>

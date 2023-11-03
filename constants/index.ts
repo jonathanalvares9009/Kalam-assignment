@@ -15,10 +15,10 @@ export const ACTIONS = [
 ]
 
 export const SAMPLES = [
-    { src: "/sample1.png", alt: "Sample One", key: "sample1" },
-    { src: "/sample2.png", alt: "Sample Two", key: "sample2" },
-    { src: "/sample3.png", alt: "Sample Three", key: "sample3" },
-    { src: "/sample4.png", alt: "Sample Four", key: "sample4" },
+    { src: "/sample1.webp", alt: "Sample One", key: "sample1" },
+    { src: "/sample2.webp", alt: "Sample Two", key: "sample2" },
+    { src: "/sample3.webp", alt: "Sample Three", key: "sample3" },
+    { src: "/sample4.webp", alt: "Sample Four", key: "sample4" },
 ]
 
 export const LINKS = [
