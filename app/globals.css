@@ -10,9 +10,24 @@
   box-sizing: border-box;
 }
 
+
 body {
-  font-family: Inter;
+  font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  -webkit-font-feature-settings: 'ss01';
+  font-feature-settings: 'ss01';
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  overflow-x: hidden;
+  background: #fff;
+  color: #0d0c22;
 }
+
 
 @layer utilities {
   .btn_white { 
@@ -24,11 +39,14 @@ body {
   .btn_green  { 
     @apply  border-green-50 bg-green-50 px-8 py-5 text-white
   }
-  .btn_dark_green { 
-    @apply  bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
+  .btn_dark_blue { 
+    @apply  bg-blue-100 px-8 py-3 text-white transition-all hover:bg-black
+  }
+  .btn_transparent { 
+    @apply  border-transparent bg-transparent px-8 py-3 text-black
   }
   .btn_dark_green_outline  { 
-    @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+    @apply border-gray-20 bg-blue-100 px-8 py-5 text-white
   }
   
   .max-container {
@@ -141,7 +159,7 @@ body {
 
   /* Get App */
   .get-app {
-    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-green-90 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
+    @apply max-container relative flex w-full  flex-col justify-between gap-32 overflow-hidden bg-blue-100 bg-pattern bg-cover bg-center bg-no-repeat px-6 py-12 text-white sm:flex-row sm:gap-12 sm:py-24 lg:px-20 xl:max-h-[598px] 2xl:rounded-5xl;
   }
 }
 
