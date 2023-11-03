@@ -7,7 +7,14 @@ import Button from "./Button"
 const Navbar = () => {
   return (
     <nav className="flex justify-between relative z-30 py-5 px-8">
-      <div className="flex gap-8">
+      <div className="flex items-center gap-4">
+        <div className="flex flex-col h-4 w-4 justify-between lg:hidden">
+          <span className="w-full h-0.5 bg-black"></span>
+          <span className="w-full h-0.5 bg-black"></span>
+          <span className="w-2/3 h-0.5 bg-black"></span>
+        </div>
+
+
         <Image src="/dribble-logo.svg" width={76} height={30} alt="Dribble Logo" className="block xl:hidden" />
         <ul className="hidden h-full gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
