@@ -13,3 +13,10 @@ export const ACTIONS = [
     { src: "/feedback.svg", alt: "feedback", key: "feedback" },
     { src: "/info.svg", alt: "info", key: "info" },
 ]
+
+export const SAMPLES = [
+    { src: "/sample1.png", alt: "Sample One", key: "sample1" },
+    { src: "/sample2.png", alt: "Sample Two", key: "sample2" },
+    { src: "/sample3.png", alt: "Sample Three", key: "sample3" },
+    { src: "/sample4.png", alt: "Sample Four", key: "sample4" },
+]
