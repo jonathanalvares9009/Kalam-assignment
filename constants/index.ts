@@ -5,3 +5,11 @@ export const NAV_LINKS = [
     { href: 'https://dribbble.com/jobs', key: 'jobs', label: 'Jobs' },
     { href: 'https://dribbble.com/pro', key: 'go_pro', label: 'Go Pro' },
 ];
+
+export const ACTIONS = [
+    { src: "/heart.svg", alt: "heart", key: "heart" },
+    { src: "/bookmark.svg", alt: "bookmark", key: "bookmark" },
+    { src: "/share.svg", alt: "share", key: "share" },
+    { src: "/feedback.svg", alt: "feedback", key: "feedback" },
+    { src: "/info.svg", alt: "info", key: "info" },
+]
