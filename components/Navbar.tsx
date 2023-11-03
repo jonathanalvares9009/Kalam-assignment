@@ -8,10 +8,10 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between relative z-30 py-5 px-8">
       <div className="flex items-center gap-4">
-        <div className="flex flex-col h-4 w-4 justify-between lg:hidden">
-          <span className="w-full h-0.5 bg-black"></span>
-          <span className="w-full h-0.5 bg-black"></span>
-          <span className="w-2/3 h-0.5 bg-black"></span>
+        <div className="flex flex-col h-4 w-5 justify-between bg-transparent lg:hidden">
+          <span className="w-full h-0.5 bg-blue-100"></span>
+          <span className="w-full h-0.5 bg-blue-100"></span>
+          <span className="w-2/3 h-0.5 bg-blue-100"></span>
         </div>
 
 
