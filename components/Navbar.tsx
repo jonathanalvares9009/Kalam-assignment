@@ -2,7 +2,9 @@
 import { ACTIONS, NAV_LINKS } from "@/constants"
 import Image from "next/image"
 import Link from "next/link"
+import { Tooltip } from "@material-tailwind/react";
 import Button from "./Button"
+
 import { useEffect, useRef, useState } from "react"
 
 
@@ -63,9 +65,11 @@ const Navbar = () => {
       <div className="hidden flex-col fixed top-36 right-8 gap-4 justify-center select-none sm:flex">
           <Image src="/profile.webp" width={20} height={20} alt="Profile" className="rounded-full cursor-pointer select-none h-10 w-10" />
           {ACTIONS.map((action, index) => (
+            <Tooltip content={action.label} placement="left" key={index}>
             <div key={index} className="p-2.5 rounded-full border-2 cursor-pointer border-gray-50 w-10 h-10">
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
             </div>
+            </Tooltip>
           ))}
       </div>
 

@@ -1,4 +1,5 @@
-import { ACTIONS } from "@/constants"
+"use client"
+import { Tooltip } from "@material-tailwind/react";
 import Image from "next/image"
 
 const Hero = () => {
@@ -22,7 +23,9 @@ const Hero = () => {
             <div className="flex h-full text-sm justify-items-center items-center gap-2">
                 <p>Nailul Izah</p>
                 <span className="inline-block w-1 h-1 border-2 border-black rounded-full"></span>
-                <p>Follow</p>
+                <Tooltip content="Follow Nailul Izah" placement="top">
+                  <p>Follow</p>
+                </Tooltip>
             </div>
           </div>
         </div>

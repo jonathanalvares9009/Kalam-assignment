@@ -7,11 +7,11 @@ export const NAV_LINKS = [
 ];
 
 export const ACTIONS = [
-    { src: "/heart.svg", alt: "heart", key: "heart" },
-    { src: "/bookmark.svg", alt: "bookmark", key: "bookmark" },
-    { src: "/share.svg", alt: "share", key: "share" },
-    { src: "/feedback.svg", alt: "feedback", key: "feedback" },
-    { src: "/info.svg", alt: "info", key: "info" },
+    { src: "/heart.svg", alt: "heart", key: "heart", label: "Like" },
+    { src: "/bookmark.svg", alt: "bookmark", key: "bookmark", label: "Save" },
+    { src: "/share.svg", alt: "share", key: "share", label: "Share" },
+    { src: "/feedback.svg", alt: "feedback", key: "feedback", label: "Feedback" },
+    { src: "/info.svg", alt: "info", key: "info", label: "Shot details" },
 ]
 
 export const SAMPLES = [
