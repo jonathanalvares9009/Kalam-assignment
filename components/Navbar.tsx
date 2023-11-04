@@ -29,7 +29,7 @@ const Navbar = () => {
         <a href="https://dribbble.com/" className="cursor-pointer"><Image src="/dribble-logo.svg" width={76} height={30} alt="Dribble Logo" className="block select-none xl:hidden lg:w-28" /></a>
         <ul className="hidden h-full gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
-            <Link href={link.href} key={link.key} className="regular-16 text-blue-100 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
+            <Link href={link.href} key={link.key} className="regular-16 text-blue-100 font-bold flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
               {link.label}
             </Link>
           ))}
@@ -77,14 +77,14 @@ const Navbar = () => {
                 <ul className="flex flex-col gap-2 justify-center px-6 py-6 bg-slate">
                   {NAV_LINKS.map((link) => (
                       <li key={link.key} className="mx-2">
-                          <Link href={link.href} className="bold-16 text-gray-500 hover:text-gray-800">
+                          <Link href={link.href} className="bold-16 text-blue-100 font-bold hover:text-gray-800">
                               {link.label}
                           </Link>
                       </li>
                   ))}
                   <hr />
                   <li className="mx-2">
-                      <Link href={""} className="bold-16 text-gray-500 hover:text-gray-800">
+                      <Link href={""} className="bold-16 text-blue-100 font-bold hover:text-gray-800">
                           Log in
                       </Link>
                   </li>

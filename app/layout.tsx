@@ -15,9 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
       <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossOrigin='' />
-      </head>
+      </head> */}
       <body>
         <Navbar />
         <main>{children}</main>
