@@ -39,15 +39,17 @@ export const SOCIALS = [
     { icon: "/pinterest.svg", alt: "pinterest", key: "pinterest", href: "http://www.pinterest.com/dribbble" },
 ]
 
-export const FOOTER_LINKS = [
+export const FOOTER_LINKS_ONE = [
+    { href: "https://dribbble.com/terms", label: "Terms", key: "terms" },
+    { href: "https://dribbble.com/privacy", label: "Privacy", key: "privacy" },
+    { href: "https://dribbble.com/cookie-policy", label: "Cookies", key: "cookies" },
+]
+
+export const FOOTER_LINKS_TWO = [
     { href: "https://dribbble.com/directories/jobs", label: "Jobs", key: "jobs" },
     { href: "https://dribbble.com/directories/designers", label: "Designers", key: "designers" },
     { href: "https://dribbble.com/directories/freelance-designers", label: "Freelancers", key: "freelancers" },
     { href: "https://dribbble.com/tags", label: "Tags", key: "tags" },
     { href: "https://dribbble.com/places", label: "Places", key: "places" },
     { href: "https://dribbble.com/resources", label: "Resources", key: "resources" },
-    { label: "© 2023 Dribbble", key: "dribble" },
-    { href: "https://dribbble.com/terms", label: "Terms", key: "terms" },
-    { href: "https://dribbble.com/privacy", label: "Privacy", key: "privacy" },
-    { href: "https://dribbble.com/cookie-policy", label: "Cookies", key: "cookies" },
 ]
