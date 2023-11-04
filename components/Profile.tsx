@@ -43,7 +43,7 @@ const Profile = () => {
         <div className="flex flex-col items-center w-full">
           <div className="flex gap-4 w-full items-center select-none">
             <span className="border border-gray-50 w-full"></span>
-            <a href="https://dribbble.com/nailulizah" className="flex justify-center items-center  w-1/4 sm:h-1/6">
+            <a href="https://dribbble.com/nailulizah" className="flex justify-center items-center w-2/5 sm:w-1/4 md:w-1/6">
               <Image src="/profile.webp" width={20} height={20} alt="Profile" className="rounded-full h-12 w-12" />
             </a>
             <span className="border border-gray-50 w-full"></span>
