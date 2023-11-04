@@ -9,12 +9,14 @@ import { useState } from "react"
 import ProfileTooltip from "./ProfileTooltip";
 import SignUpComponent from "./SignUpComponent";
 import ShotDetailsModal from "./ShotDetailsModal";
+import ShareModal from "./ShareModal";
 
 
 const Navbar = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
   const [isShotDetailsModalOpen, setIsShotDetailsModalOpen] = useState(false)
+  const [isShareModalOpen, setIsShareModalOpen] = useState(false)
   
   return (
     <nav className="flex justify-between relative z-1 py-5 px-4 h-24 selection:bg-yellow-50">
@@ -64,6 +66,7 @@ const Navbar = () => {
               onClick={() => {
                 if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
                 if (action.key === "info") setIsShotDetailsModalOpen(true)
+                if (action.key === "share") setIsShareModalOpen(true)
               }}
             >
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
@@ -94,6 +97,7 @@ const Navbar = () => {
 
         {isSignUpModalOpen && <SignUpComponent setCloseSignUp={setIsSignUpModalOpen} />}
         {isShotDetailsModalOpen && <ShotDetailsModal setClose={setIsShotDetailsModalOpen} />}
+        {isShareModalOpen && <ShareModal setClose={setIsShareModalOpen} />}
     </nav>
   )
 }
