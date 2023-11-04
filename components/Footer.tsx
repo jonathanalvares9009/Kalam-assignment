@@ -6,7 +6,7 @@ const Footer = () => {
     <section className='flex flex-col gap-20 pt-56 pb-8 px-8 items-center xl:px-40 sm:px-32 text-base'>
       <div className="flex flex-col gap-5 items-center w-full lg:flex-row md:justify-between">
         <div className='flex flex-col items-center select-none'>
-          <Image src="/dribble-logo.svg" width={104} height={30} alt="Dribble Logo" />
+        <a href="https://dribbble.com/" className="cursor-pointer"><Image src="/dribble-logo.svg" width={104} height={30} alt="Dribble Logo" /></a>
         </div>
 
         <ul className="flex flex-wrap justify-center gap-y-1 gap-x-4 selection:bg-yellow-50 text-sm text-blue-100 font-normal xl:gap-x-10">

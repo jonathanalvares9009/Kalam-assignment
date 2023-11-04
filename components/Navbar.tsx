@@ -32,7 +32,7 @@ const Navbar = () => {
         </div>
 
 
-        <Image src="/dribble-logo.svg" width={76} height={30} alt="Dribble Logo" className="block select-none xl:hidden lg:w-28" />
+        <a href="https://dribbble.com/" className="cursor-pointer"><Image src="/dribble-logo.svg" width={76} height={30} alt="Dribble Logo" className="block select-none xl:hidden lg:w-28" /></a>
         <ul className="hidden h-full gap-6 lg:flex">
           {NAV_LINKS.map((link) => (
             <Link href={link.href} key={link.key} className="regular-16 text-blue-100 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
@@ -42,7 +42,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <Image src="/dribble-logo.svg" width={124} height={30} alt="Dribble Logo" className="hidden select-none xl:block" />
+      <a href="https://dribbble.com/" className="cursor-pointer"><Image src="/dribble-logo.svg" width={124} height={30} alt="Dribble Logo" className="hidden select-none xl:block" /></a>
 
       <div className="flex">
         <div className="items-center border border-gray-300 bg-gray-300 rounded-full px-4 hidden h-full gap-6 xl:flex">
