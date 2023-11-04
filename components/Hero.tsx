@@ -5,7 +5,7 @@ import ProfileTooltip from "./ProfileTooltip";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col gap-10 py-8 lg:items-center pb-16 selection:bg-yellow-50">
+    <section className="flex flex-col gap-10 py-8 lg:items-center pb-16 selection:bg-yellow-50 sm:items-center">
         <div className="flex flex-col gap-2 px-4 lg:hidden">
             <h1 className="text-blue-100 font text-xl font-medium">Wemsc - Music Streaming Desktop App (Dark Mode)</h1>
             <div className="flex gap-4">
@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none cursor-pointer lg:w-3/5" unoptimized={true} />
+        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none cursor-pointer sm:w-3/5" unoptimized={true} />
     </section>
   )
 }
