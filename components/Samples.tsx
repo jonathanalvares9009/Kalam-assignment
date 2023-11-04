@@ -1,5 +1,7 @@
 import { SAMPLES } from "@/constants"
 import Sample from "./Sample"
+import Image from "next/image"
+import SignUpComponent from "./SignUpComponent"
 
 const Samples = () => {
   return (
@@ -16,6 +18,14 @@ const Samples = () => {
           ))
         }
       </div>
+
+      <div className="flex gap-4 justify-center pt-6 items-center">
+        <Image src="/l.svg" width={28} height={28} alt="L" />
+        <Image src="/f.svg" width={28} height={28} alt="F" />
+        <p>Like</p>
+      </div>
+
+      <SignUpComponent />
     </section>
   )
 }
