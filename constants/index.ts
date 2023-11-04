@@ -15,10 +15,10 @@ export const ACTIONS = [
 ]
 
 export const SAMPLES = [
-    { src: "/sample1.webp", alt: "Sample One", key: "sample1" },
-    { src: "/sample2.webp", alt: "Sample Two", key: "sample2" },
-    { src: "/sample3.webp", alt: "Sample Three", key: "sample3" },
-    { src: "/sample4.webp", alt: "Sample Four", key: "sample4" },
+    { src: "/sample1.webp", alt: "Sample One", key: "sample1", label: "View Rekam - Photo Journal / Landing Page Concept.", href: "https://dribbble.com/shots/22469169-Rekam-Photo-Journal-Landing-Page-Concept" },
+    { src: "/sample2.webp", alt: "Sample Two", key: "sample2", label: "Oppps - Social Media Desktop App (Light Mode)", href: "https://dribbble.com/shots/21546245-Oppps-Social-Media-Desktop-App-Light-Mode" },
+    { src: "/sample3.webp", alt: "Sample Three", key: "sample3", label: "Ceramica - Ceramic Studio / Landing Page Concept.", href: "https://dribbble.com/shots/22460851-Ceramica-Ceramic-Studio-Landing-Page-Concept" },
+    { src: "/sample4.webp", alt: "Sample Four", key: "sample4", label: "Travel Mobile App", href: "https://dribbble.com/shots/22460851-Ceramica-Ceramic-Studio-Landing-Page-Concept" },
 ]
 
 export const LINKS = [
