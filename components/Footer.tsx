@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const Footer = () => {
   return (
-    <section className='flex flex-col gap-20 pt-56 pb-8 px-8 items-center xl:px-40 text-base'>
+    <section className='flex flex-col gap-20 pt-56 pb-8 px-8 items-center xl:px-40 sm:px-32 text-base'>
       <div className="flex flex-col gap-5 items-center w-full lg:flex-row md:justify-between">
         <div className='flex flex-col items-center select-none'>
           <Image src="/dribble-logo.svg" width={104} height={30} alt="Dribble Logo" />
