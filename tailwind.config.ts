@@ -27,18 +27,27 @@ module.exports = withMT({
       },
       colors: {
         blue: {
+          50: '#f4fafe',
           100: '#0d0c22',
+          200: '#1da1f2'
         },
         gray: {
           50: '#e7e7e9',
           10: '#6e6d7a',
+          100: '#f3f3f4'
         },
         yellow: {
           50: 'rgba(255,218,121,0.5)',
+        },
+        pink: {
+          50: '#f8e6e8'
         }
       },
       width: {
         '47': '47%',
+      },
+      inset: {
+        'negative-40': '-40px',
       }
     },
   },
