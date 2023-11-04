@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none lg:w-3/5" unoptimized={true} />
+        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none cursor-pointer lg:w-3/5" unoptimized={true} />
     </section>
   )
 }

@@ -49,15 +49,21 @@ const Navbar = () => {
           <Image src="/search-icon.svg" width={16} height={16} alt="Search Icon" className="select-none" />
           <input type="text" className="outline-none bg-gray-300  px-2 w-full" placeholder="Search..." />
         </div>
-        <Image src="/search-icon.svg" width={20} height={20} alt="Search Icon" className="block select-none xl:hidden mx-4" />
-        <Button type="button" title="Log in" variant="btn_transparent hidden lg:flex" />
-        <Button type="button" title="Sign up" variant="btn_dark_blue" />
+        <a href="https://dribbble.com/search" className="flex xl:hidden">
+          <Image src="/search-icon.svg" width={20} height={20} alt="Search Icon" className="block select-none cursor-pointer mx-4" />
+        </a>
+        <a href="https://dribbble.com/session/new">
+          <Button type="button" title="Log in" variant="btn_transparent hidden lg:flex" />
+        </a>
+        <a href="https://dribbble.com/signup/new">
+          <Button type="button" title="Sign up" variant="btn_dark_blue" />
+        </a>
       </div>
 
       <div className="hidden flex-col fixed top-36 right-8 gap-4 justify-center select-none sm:flex">
-          <Image src="/profile.webp" width={20} height={20} alt="Profile" className="rounded-full select-none h-10 w-10" />
+          <Image src="/profile.webp" width={20} height={20} alt="Profile" className="rounded-full cursor-pointer select-none h-10 w-10" />
           {ACTIONS.map((action, index) => (
-            <div key={index} className="p-2.5 rounded-full border-2 border-gray-50 w-10 h-10">
+            <div key={index} className="p-2.5 rounded-full border-2 cursor-pointer border-gray-50 w-10 h-10">
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
             </div>
           ))}
