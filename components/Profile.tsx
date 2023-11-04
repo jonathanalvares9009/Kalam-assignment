@@ -3,9 +3,11 @@ import { ACTIONS } from "@/constants"
 import Image from "next/image"
 import { useState } from "react"
 import SignUpComponent from "./SignUpComponent"
+import ShotDetailsModal from "./ShotDetailsModal"
 
 const Profile = () => {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
+  const [isShotDetailsModalOpen, setIsShotDetailsModalOpen] = useState(false)
 
   return (
     <section className="flex flex-col gap-8 px-4 sm:px-32 justify-center selection:bg-yellow-50">
@@ -30,6 +32,7 @@ const Profile = () => {
             <div key={index} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer"
               onClick={() => {
                 if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
+                if (action.key === "info") setIsShotDetailsModalOpen(true)  
               }}
             >
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
@@ -50,6 +53,7 @@ const Profile = () => {
       </div>
 
       {isSignUpModalOpen && <SignUpComponent setCloseSignUp={setIsSignUpModalOpen} />}
+      {isShotDetailsModalOpen && <ShotDetailsModal setClose={setIsShotDetailsModalOpen} />}
     </section>
   )
 }

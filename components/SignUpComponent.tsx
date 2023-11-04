@@ -6,7 +6,7 @@ type SignUpComponentProps = {
 
 const SignUpComponent = ({setCloseSignUp}: SignUpComponentProps) => {
   return (
-    <section className='fixed inset-0 flex justify-center items-center bg-black backdrop-blur-sm bg-opacity-30'>
+    <section className='fixed inset-0 flex justify-center items-center bg-black backdrop-blur-sm bg-opacity-30 z-[1]'>
       <div className='flex flex-col fixed bg-white rounded-lg p-8 gap-6 text-center w-4/5 lg:w-2/5 sm:text-left z-1'>
         <Image src="/dribble-logo.svg" width={124} height={30} alt="Dribble Logo" className="hidden select-none xl:block" />
         <p className='text-xl font-medium selection:bg-yellow-50'>To like a shot, please create an account.</p>
