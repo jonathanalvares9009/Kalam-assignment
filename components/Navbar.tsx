@@ -5,25 +5,14 @@ import Link from "next/link"
 import { Tooltip } from "@material-tailwind/react";
 import Button from "./Button"
 
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
 import ProfileTooltip from "./ProfileTooltip";
+import SignUpComponent from "./SignUpComponent";
 
 
 const Navbar = () => {
-  // const navbarRef = useRef<HTMLElement>(null);
   const [isMenuOpen, setMenuIsOpen] = useState(false);
-
-  // useEffect(() => {
-  //   if (!navbarRef.current) return;
-  //   const navbarHeight = navbarRef.current.clientHeight;
-  //   const ulElement = document.getElementById('menu-links');
-
-  //   if (isMenuOpen && ulElement) {
-  //     ulElement.style.top = `${navbarHeight}px`;
-  //   } else if (!isMenuOpen && ulElement) {
-  //     ulElement.style.top = '0';
-  //   }
-  // }, [isMenuOpen]);
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
   
   return (
     <nav className="flex justify-between relative z-1 py-5 px-4 h-24 selection:bg-yellow-50">
@@ -69,7 +58,11 @@ const Navbar = () => {
           </ProfileTooltip>
           {ACTIONS.map((action, index) => (
             <Tooltip content={action.label} placement="left" key={index}>
-            <div key={index} className="p-2.5 rounded-full border-2 cursor-pointer border-gray-50 w-10 h-10">
+            <div key={index} className="p-2.5 rounded-full border-2 cursor-pointer border-gray-50 w-10 h-10"
+              onClick={() => {
+                if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
+              }}
+            >
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
             </div>
             </Tooltip>
@@ -95,6 +88,8 @@ const Navbar = () => {
                 </ul>
             </div>
         )}
+
+        {isSignUpModalOpen && <SignUpComponent setCloseSignUp={setIsSignUpModalOpen} />}
     </nav>
   )
 }

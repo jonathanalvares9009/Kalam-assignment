@@ -1,7 +1,12 @@
+"use client"
 import { ACTIONS } from "@/constants"
 import Image from "next/image"
+import { useState } from "react"
+import SignUpComponent from "./SignUpComponent"
 
 const Profile = () => {
+  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
+
   return (
     <section className="flex flex-col gap-8 px-4 sm:px-32 justify-center selection:bg-yellow-50">
       <div className="flex flex-col gap-8 text-xl font-normal lg:pl-56 lg:pb-20">
@@ -22,7 +27,11 @@ const Profile = () => {
       <div className="flex flex-col py-12 gap-8">
         <div className="flex gap-2 justify-center sm:hidden select-none">
           {ACTIONS.map((action, index) => (
-            <div key={index} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer">
+            <div key={index} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer"
+              onClick={() => {
+                if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
+              }}
+            >
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
             </div>
           ))}
@@ -39,6 +48,8 @@ const Profile = () => {
           <a href="https://dribbble.com/nailulizah" className="font-bold text-xl">Nailul Izah</a>
         </div>
       </div>
+
+      {isSignUpModalOpen && <SignUpComponent setCloseSignUp={setIsSignUpModalOpen} />}
     </section>
   )
 }
