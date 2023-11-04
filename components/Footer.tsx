@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
 
 
-      <div className="flex flex-col gap-1 w-full md:flex-row md:justify-between text-gray-10 text-sm font-normal selection:bg-yellow-50 selection:text-blue-100">
+      <div className="flex flex-col gap-1 w-full md:flex-row md:justify-between text-gray-10 text-sm font-normal selection:bg-yellow-50 selection:text-blue-100 px-4">
         <ul className="flex justify-center gap-4">
           <p className="cursor-text">© 2023 Dribbble</p>
           {FOOTER_LINKS_ONE.map((link, index) => (
