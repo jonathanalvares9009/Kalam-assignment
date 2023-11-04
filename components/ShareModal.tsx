@@ -1,18 +1,42 @@
-"use client"
+ // @ts-nocheck
 import Image from 'next/image';
 import React from 'react';
-// import { showAlert } from 'tailwind-toastify';
+import { Transition } from "@headlessui/react";
+import { Toaster, ToastIcon, toast, resolveValue } from "react-hot-toast";
 
 type ShareModalProps = {
     setClose: React.Dispatch<React.SetStateAction<boolean>>
 }
+
+const TailwindToaster = () => {
+  return (
+    <Toaster position="bottom">
+      {(t) => (
+        <Transition
+          appear
+          show={t.visible}
+          className="transform p-4 flex bg-white rounded shadow-lg"
+          enter="transition-all duration-150"
+          enterFrom="opacity-0 scale-50"
+          enterTo="opacity-100 scale-100"
+          leave="transition-all duration-150"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-75"
+        >
+          <ToastIcon toast={t} />
+          <p className="px-2">{resolveValue(t.message)}</p>
+        </Transition>
+      )}
+    </Toaster>
+  );
+};
 
 const ShareModal = ({setClose}: ShareModalProps) => {
     const copyToClipboard = () => {
         const textToCopy = document.getElementById('text-to-copy')?.innerText;
         if (textToCopy) {
             navigator.clipboard.writeText(textToCopy);
-            // showAlert("success", "Link copied", "A link to this page has been copied to your clipboard");
+            toast.success("A link to this page has been copied to your clipboard")
         }
     };
 
@@ -36,6 +60,7 @@ const ShareModal = ({setClose}: ShareModalProps) => {
             </div>
             <Image src="/close_without_bg.svg" width={20} height={20} alt="Close" className='absolute top-8 right-8 cursor-pointer' onClick={() => setClose(false)} />
         </div>
+        <TailwindToaster />
         </section>
     );
 };
