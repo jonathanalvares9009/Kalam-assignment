@@ -59,3 +59,17 @@ export const SHOTS = [
     { src: "/shot2.webp", alt: "Shot Two", key: "shot2", label: "Shot Two", href: "https://dribbble.com/shots/22461137-Rintik-Sedu-Website-Redesign-for-Book-Author-Landing-Page" },
     { src: "/shot3.webp", alt: "Shot Three", key: "shot3", label: "Shot Three", href: "https://dribbble.com/shots/22461079-Klamben-Clothing-Online-Shop-Mobile-Application-Concept" },
 ]
+
+export const TAGS = [
+    "high fidelity",
+    "desktop",
+    "music streaming app",
+    "streaming app",
+    "music streaming",
+    "daily ui",
+    "ui",
+    "blue",
+    "uiux",
+    "ui design",
+    "minimal",
+]
