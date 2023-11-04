@@ -3,13 +3,20 @@ import { ACTIONS, NAV_LINKS } from "@/constants"
 import Image from "next/image"
 import Link from "next/link"
 import Button from "./Button"
+import { useState } from "react"
 
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+  
   return (
     <nav className="flex justify-between relative z-1 py-5 px-4 h-24 selection:bg-yellow-50">
       <div className="flex items-center gap-4">
-        <div className="flex flex-col h-4 w-5 justify-between bg-transparent lg:hidden">
+        <div className={`flex flex-col h-4 w-5 justify-between normal bg-transparent lg:hidden ${isOpen ? 'x-open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
           <span className="w-full h-0.5 bg-blue-100"></span>
           <span className="w-full h-0.5 bg-blue-100"></span>
           <span className="w-2/3 h-0.5 bg-blue-100"></span>
