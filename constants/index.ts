@@ -53,3 +53,9 @@ export const FOOTER_LINKS_TWO = [
     { href: "https://dribbble.com/places", label: "Places", key: "places" },
     { href: "https://dribbble.com/resources", label: "Resources", key: "resources" },
 ]
+
+export const SHOTS = [
+    { src: "/shot1.webp", alt: "Shot One", key: "shot1", label: "Shot One", href: "https://dribbble.com/shots/22469169-Rekam-Photo-Journal-Landing-Page-Concept" },
+    { src: "/shot2.webp", alt: "Shot Two", key: "shot2", label: "Shot Two", href: "https://dribbble.com/shots/22461137-Rintik-Sedu-Website-Redesign-for-Book-Author-Landing-Page" },
+    { src: "/shot3.webp", alt: "Shot Three", key: "shot3", label: "Shot Three", href: "https://dribbble.com/shots/22461079-Klamben-Clothing-Online-Shop-Mobile-Application-Concept" },
+]

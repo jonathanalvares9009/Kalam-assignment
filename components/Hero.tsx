@@ -1,6 +1,7 @@
 "use client"
 import { Tooltip } from "@material-tailwind/react";
 import Image from "next/image"
+import ProfileTooltip from "./ProfileTooltip";
 
 const Hero = () => {
   return (
@@ -17,11 +18,15 @@ const Hero = () => {
         </div>
 
         <div className="hidden lg:flex gap-4 px-4 items-center">
-          <Image src="/profile.webp" width={40} height={40} alt="Profile" className="rounded-full h-12 w-12 select-none" />
+          <ProfileTooltip needsFollowButton={true} placement="bottom">
+            <Image src="/profile.webp" width={40} height={40} alt="Profile" className="rounded-full h-12 w-12 select-none" />
+          </ProfileTooltip>
           <div className="flex flex-col gap-2">
             <h1 className="text-blue-100 font text-xl font-medium">Wemsc - Music Streaming Desktop App (Dark Mode)</h1>
             <div className="flex h-full text-sm justify-items-center items-center gap-2">
-                <p>Nailul Izah</p>
+                <ProfileTooltip needsFollowButton={true} placement="bottom">
+                  <p>Nailul Izah</p>
+                </ProfileTooltip>
                 <span className="inline-block w-1 h-1 border-2 border-black rounded-full"></span>
                 <Tooltip content="Follow Nailul Izah" placement="top">
                   <p>Follow</p>
