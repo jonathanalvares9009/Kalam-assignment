@@ -13,13 +13,13 @@ const FeedbackModal = ({setClose}: FeedbackModalProps) => {
     const { setClose:  setIsShareModalOpen} = useShowDetailsModalStore()
 
   return (
-    <section className='flex flex-col gap-20 absolute top-0 right-0 px-4 h-full bg-white border border-t-transparent border-b-transparent transition transform duration-[800ms] ease-in-out delay-0 border-l-gray-300 w-4/5 sm:w-1/2 lg:w-1/4'>
+    <section className='flex flex-col gap-20 sticky top-0 right-0 px-4 h-screen bg-white border border-t-transparent border-b-transparent transition transform duration-[800ms] ease-in-out delay-0 border-l-gray-300 w-4/5 md:w-1/2 lg:w-1/4'>
       <div className="flex gap-2 justify-center select-none">
           {ACTIONS.map((action, index) => {
             if (action.key === "feedback") {
-                return <div className='w-12 h-4'></div>
+                return <div key={action.key} className='w-12 h-4'></div>
             }
-            return <div key={index} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
+            return <div key={action.key} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
               onClick={() => {
                 if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
                 if (action.key === "info") setIsShotDetailsModalOpen(true)

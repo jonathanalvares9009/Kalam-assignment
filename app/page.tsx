@@ -8,7 +8,7 @@ import { useFeedbackModalStore } from "@/store/zustand";
 export default function Home() {
   const { isFeedbackModalOpen, setClose } = useFeedbackModalStore()
   return (
-    <div className={`${isFeedbackModalOpen ? 'relative': ''}`}>
+    <div className={`${isFeedbackModalOpen ? 'relative': ''} flex items-start`}>
       <div className={`${isFeedbackModalOpen ? 'w-3/4' : 'w-full'}`}>
         <Hero />
         <Profile />
