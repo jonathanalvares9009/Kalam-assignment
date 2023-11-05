@@ -43,7 +43,7 @@ const Sample = ({src, alt, label, href}: SampleProps) => {
     <a href={href} className=" w-full relative text-base lg:rounded-xl" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
       <Image src={src} alt={alt} width={80} height={80} className="w-full rounded-lg" placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`} unoptimized={true} />
       { isHovered && 
-        <div className="w-full h-full absolute bottom-0 left-0 flex flex-col-reverse py-6 px-4 bg-transparent/50">
+        <div className="w-full h-full absolute bottom-0 left-0 flex flex-col-reverse py-6 px-4 bg-transparent/30">
           <div className="flex justify-between items-center">
             <p className="truncate font-medium text-white w-4/5">{label}</p>
             <div className="flex gap-2">
