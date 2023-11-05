@@ -34,7 +34,7 @@ const FeedbackModal = ({setClose}: FeedbackModalProps) => {
             <Image src="/comments-signup-avatars.webp" width={100} height={100} alt="Profile" className="rounded-full w-2/5 mx-auto" />
             <h1 className='text-center text-xl font-bold text-black'>Start the discussion</h1>
             <p className='text-center text-sm font-medium text-gray-10'>Looking to share your feedback and start the conversation?</p>
-            <button className='bg-black rounded-full w-3/5 py-1 text-white text-md'>Sign up to Dribble</button>
+            <button className='bg-black rounded-full w-3/5 py-1 text-white text-md hidden sm:block'>Sign up to Dribble</button>
         </div>
         <button className='absolute h-8 w-8 left-[-16px] top-2 bg-white border border-gray-300 rounded-full' onClick={() => setClose(false)}>
             <Image src="/close_without_bg.svg" width={10} height={10} alt="Profile" className="rounded-full w-2/5 mx-auto" />
