@@ -7,7 +7,7 @@ type ShotDetailsModalProps = {
 
 const ShotDetailsModal = ({setClose}: ShotDetailsModalProps) => {
   return (
-    <section className='fixed inset-0 flex justify-center items-center bg-black backdrop-blur-sm bg-opacity-30 z-[1]'>
+    <section className='fixed inset-0 flex justify-center items-center bg-black backdrop-blur-sm bg-opacity-30 z-[1]' onClick={() => setClose(false)}>
       <div className='flex flex-col fixed bg-white rounded-lg p-8 gap-6 text-center w-4/5 lg:w-2/5 sm:text-left'>
         <div className='flex flex-col gap-2'>
             <h1 className='text-black font-bold text-2xl'>Shot details</h1>

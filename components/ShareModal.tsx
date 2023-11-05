@@ -41,7 +41,7 @@ const ShareModal = ({setClose}: ShareModalProps) => {
     };
 
     return (
-        <section className='fixed inset-0 flex justify-center items-center bg-black backdrop-blur-sm bg-opacity-30 z-[1]'>
+        <section className='fixed inset-0 flex justify-center items-center bg-black backdrop-blur-sm bg-opacity-30 z-[1]' onClick={() => setClose(false)}>
         <div className='flex flex-col fixed bg-white rounded-lg p-8 gap-6 text-center w-4/5 lg:w-2/5 sm:text-left'>
             <Image src="/work.webp" width={300} height={300} alt="Shot to share" className='absolute left-1/2 transform -translate-x-1/2 top-negative-40 rounded-xl' />
             <h1 className='text-blue-100 font-bold text-2xl pt-52 text-center'>Share this with your social Community</h1>
