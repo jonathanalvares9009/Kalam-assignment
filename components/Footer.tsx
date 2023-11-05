@@ -4,7 +4,7 @@ import Image from "next/image"
 const Footer = () => {
   return (
     <section className='flex flex-col gap-20 pt-56 pb-8 px-8 items-center xl:px-40 sm:px-32 text-base'>
-      <div className="flex flex-col gap-5 items-center w-full lg:flex-row md:justify-between">
+      <div className="flex flex-col gap-5 items-center w-full laptop:flex-row md:justify-between">
         <div className='flex flex-col items-center select-none'>
         <a href="https://dribbble.com/" className="cursor-pointer"><Image src="/dribble-logo.svg" width={104} height={30} alt="Dribble Logo" /></a>
         </div>
@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
 
 
-      <div className="flex flex-col gap-1 w-full md:flex-row md:justify-between text-gray-10 text-sm font-normal selection:bg-yellow-50 selection:text-blue-100 px-4">
+      <div className="flex flex-col gap-1 w-full xl:flex-row md:justify-between text-gray-10 text-sm font-normal selection:bg-yellow-50 selection:text-blue-100 px-4">
         <ul className="flex justify-center gap-4">
           <p className="cursor-text">© 2023 Dribbble</p>
           {FOOTER_LINKS_ONE.map((link, index) => (
