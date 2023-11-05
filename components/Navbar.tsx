@@ -10,6 +10,7 @@ import ProfileTooltip from "./ProfileTooltip";
 import SignUpComponent from "./SignUpComponent";
 import ShotDetailsModal from "./ShotDetailsModal";
 import ShareModal from "./ShareModal";
+import { useFeedbackModalStore } from "@/store/zustand";
 
 
 const Navbar = () => {
@@ -17,6 +18,7 @@ const Navbar = () => {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
   const [isShotDetailsModalOpen, setIsShotDetailsModalOpen] = useState(false)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
+  const { isFeedbackModalOpen, setClose } = useFeedbackModalStore()
   
   return (
     <nav className="flex justify-between relative z-1 py-5 px-4 h-24 selection:bg-yellow-50">
@@ -56,7 +58,8 @@ const Navbar = () => {
         </a>
       </div>
 
-      <div className="hidden flex-col fixed top-36 right-8 gap-4 justify-center select-none sm:flex">
+      {!isFeedbackModalOpen &&      
+        <div className="hidden flex-col fixed top-36 right-8 gap-4 justify-center select-none sm:flex">
           <ProfileTooltip needsFollowButton={false} placement="left">
             <Image src="/profile.webp" width={20} height={20} alt="Profile" className="hover:animate-pulse rounded-full cursor-pointer select-none h-10 w-10" />
           </ProfileTooltip>
@@ -67,13 +70,15 @@ const Navbar = () => {
                 if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
                 if (action.key === "info") setIsShotDetailsModalOpen(true)
                 if (action.key === "share") setIsShareModalOpen(true)
+                if (action.key === "feedback") setClose(true)
               }}
             >
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
             </div>
             </Tooltip>
           ))}
-      </div>
+        </div>
+      }
 
       {isMenuOpen && (
             <div id="menu-links" className="fixed w-full top-24 left-0 opacity-1 visible border-t-2 border-blue-100 bg-white lg:hidden">

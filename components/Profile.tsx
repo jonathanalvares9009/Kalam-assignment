@@ -5,11 +5,13 @@ import { useState } from "react"
 import SignUpComponent from "./SignUpComponent"
 import ShotDetailsModal from "./ShotDetailsModal"
 import ShareModal from "./ShareModal"
+import { useFeedbackModalStore } from "@/store/zustand"
 
 const Profile = () => {
   const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
   const [isShotDetailsModalOpen, setIsShotDetailsModalOpen] = useState(false)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
+  const { setClose } = useFeedbackModalStore()
 
   return (
     <section className="flex flex-col gap-8 px-4 sm:px-32 justify-center selection:bg-yellow-50">
@@ -36,6 +38,7 @@ const Profile = () => {
                 if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
                 if (action.key === "info") setIsShotDetailsModalOpen(true)
                 if (action.key === "share") setIsShareModalOpen(true)
+                if (action.key === "feedback") setClose(true)
               }}
             >
               <Image src={action.src} width={16} height={16} alt={action.key} key={action.key} />
