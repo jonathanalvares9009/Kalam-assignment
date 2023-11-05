@@ -9,7 +9,7 @@ const Hero = () => {
         <div className="flex flex-col gap-2 px-4 lg:hidden">
             <h1 className="text-blue-100 font text-xl font-medium">Wemsc - Music Streaming Desktop App (Dark Mode)</h1>
             <div className="flex gap-4">
-                <Image src="/profile.webp" width={40} height={40} alt="Profile" className="rounded-full h-12 w-12 select-none" />
+                <Image src="/profile.webp" width={40} height={40} alt="Profile" className="hover:animate-pulse rounded-full h-12 w-12 select-none" />
                 <div className="flex flex-col h-full text-sm justify-items-center gap-2">
                     <p>Nailul Izah</p>
                     <p>Follow</p>
@@ -19,7 +19,7 @@ const Hero = () => {
 
         <div className="hidden lg:flex gap-4 px-4 items-center">
           <ProfileTooltip needsFollowButton={true} placement="bottom">
-            <Image src="/profile.webp" width={40} height={40} alt="Profile" className="rounded-full h-12 w-12 select-none" />
+            <Image src="/profile.webp" width={40} height={40} alt="Profile" className="hover:animate-pulse rounded-full h-12 w-12 select-none" />
           </ProfileTooltip>
           <div className="flex flex-col gap-2">
             <h1 className="text-blue-100 font text-xl font-medium">Wemsc - Music Streaming Desktop App (Dark Mode)</h1>

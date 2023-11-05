@@ -58,7 +58,7 @@ const Navbar = () => {
 
       <div className="hidden flex-col fixed top-36 right-8 gap-4 justify-center select-none sm:flex">
           <ProfileTooltip needsFollowButton={false} placement="left">
-            <Image src="/profile.webp" width={20} height={20} alt="Profile" className="rounded-full cursor-pointer select-none h-10 w-10" />
+            <Image src="/profile.webp" width={20} height={20} alt="Profile" className="hover:animate-pulse rounded-full cursor-pointer select-none h-10 w-10" />
           </ProfileTooltip>
           {ACTIONS.map((action, index) => (
             <Tooltip content={action.label} placement="left" key={index}>
