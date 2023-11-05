@@ -2,8 +2,12 @@
 import { Tooltip } from "@material-tailwind/react";
 import Image from "next/image"
 import ProfileTooltip from "./ProfileTooltip";
+import { useState } from "react";
+import ShowDemoModal from "./ShowDemoModal";
 
 const Hero = () => {
+  const [isShowDemoModalOpen, setIsShowDemoModalOpen] = useState(false)
+  
   return (
     <section className="flex flex-col gap-10 py-8 lg:items-center pb-16 selection:bg-yellow-50 sm:items-center">
         <div className="flex flex-col gap-2 px-4 lg:hidden">
@@ -35,7 +39,9 @@ const Hero = () => {
           </div>
         </div>
 
-        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none cursor-pointer sm:w-3/5" unoptimized={true} />
+        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none cursor-pointer sm:w-3/5" unoptimized={true} onClick={() => setIsShowDemoModalOpen(true)} />
+
+        {isShowDemoModalOpen && <ShowDemoModal setClose={setIsShowDemoModalOpen} />}
     </section>
   )
 }

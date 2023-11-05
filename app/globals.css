@@ -207,3 +207,10 @@ body {
   transform-origin: 0% 50%;
 }
 
+.work {
+  transform-origin: 0px 0px;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1);
+  transition: none 333ms ease 0ms;
+  transition-duration: 333ms;
+  transition-delay: 0ms;
+}
