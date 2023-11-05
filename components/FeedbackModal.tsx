@@ -13,7 +13,7 @@ const FeedbackModal = ({setClose}: FeedbackModalProps) => {
     const { setClose:  setIsShareModalOpen} = useShowDetailsModalStore()
 
   return (
-    <section className='flex flex-col gap-20 absolute top-0 right-0 px-4 h-full bg-white border border-t-transparent border-b-transparent border-l-gray-300 w-4/5 sm:w-1/2 lg:w-1/4' onClick={() => setClose(false)}>
+    <section className='flex flex-col gap-20 absolute top-0 right-0 px-4 h-full bg-white border border-t-transparent border-b-transparent transition transform duration-[800ms] ease-in-out delay-0 border-l-gray-300 w-4/5 sm:w-1/2 lg:w-1/4'>
       <div className="flex gap-2 justify-center select-none">
           {ACTIONS.map((action, index) => {
             if (action.key === "feedback") {
