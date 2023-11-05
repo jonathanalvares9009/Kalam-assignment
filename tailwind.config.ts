@@ -51,5 +51,8 @@ module.exports = withMT({
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
 })
