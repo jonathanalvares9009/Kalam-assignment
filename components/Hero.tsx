@@ -4,6 +4,7 @@ import Image from "next/image"
 import ProfileTooltip from "./ProfileTooltip";
 import { useState } from "react";
 import ShowDemoModal from "./ShowDemoModal";
+import { shimmer, toBase64 } from "@/utility/facade";
 
 const Hero = () => {
   const [isShowDemoModalOpen, setIsShowDemoModalOpen] = useState(false)
@@ -39,7 +40,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none cursor-pointer sm:w-3/5" unoptimized={true} onClick={() => setIsShowDemoModalOpen(true)} />
+        <Image src="/work.webp" height={300} width={400} alt="Hero" className="w-full select-none cursor-pointer sm:w-3/5" placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`} unoptimized={true} onClick={() => setIsShowDemoModalOpen(true)} />
 
         {isShowDemoModalOpen && <ShowDemoModal setClose={setIsShowDemoModalOpen} />}
     </section>
