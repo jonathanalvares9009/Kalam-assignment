@@ -5,7 +5,7 @@ import { Transition } from "@headlessui/react";
 import { Toaster, ToastIcon, toast, resolveValue } from "react-hot-toast";
 
 type ShareModalProps = {
-    setClose: React.Dispatch<React.SetStateAction<boolean>>
+    setClose: (desiredState: boolean) => void
 }
 
 const TailwindToaster = () => {

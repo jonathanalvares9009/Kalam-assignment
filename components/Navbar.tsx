@@ -10,15 +10,15 @@ import ProfileTooltip from "./ProfileTooltip";
 import SignUpComponent from "./SignUpComponent";
 import ShotDetailsModal from "./ShotDetailsModal";
 import ShareModal from "./ShareModal";
-import { useFeedbackModalStore, useShowDemoModalStore, useSignUpModalStore } from "@/store/zustand";
+import { useFeedbackModalStore, useShowDemoModalStore, useShowDetailsModalStore, useSignUpModalStore } from "@/store/zustand";
 
 
 const Navbar = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
-  const [isShareModalOpen, setIsShareModalOpen] = useState(false)
   const { isFeedbackModalOpen, setClose } = useFeedbackModalStore()
   const { isSignUpModalOpen, setClose: setIsSignUpModalOpen } = useSignUpModalStore()
   const { isShowDemoModalOpen, setClose:  setIsShotDetailsModalOpen} = useShowDemoModalStore()
+  const { isShowDetailsModalOpen, setClose:  setIsShareModalOpen} = useShowDetailsModalStore()
   
   return (
     <nav className="flex justify-between relative z-1 py-5 px-4 h-24 selection:bg-yellow-50">
@@ -102,7 +102,7 @@ const Navbar = () => {
 
         {isSignUpModalOpen && <SignUpComponent setCloseSignUp={setIsSignUpModalOpen} />}
         {isShowDemoModalOpen && <ShotDetailsModal setClose={setIsShotDetailsModalOpen} />}
-        {isShareModalOpen && <ShareModal setClose={setIsShareModalOpen} />}
+        {isShowDetailsModalOpen && <ShareModal setClose={setIsShareModalOpen} />}
     </nav>
   )
 }

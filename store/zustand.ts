@@ -29,3 +29,13 @@ export const useShowDemoModalStore = create<ShowDemoModalStore>((set) => ({
     isShowDemoModalOpen: false,
     setClose: (desiredState) => set((state) => ({ isShowDemoModalOpen: desiredState })),
 }));
+
+type ShowDetailsModalStore = {
+    isShowDetailsModalOpen: boolean,
+    setClose: (desiredState: boolean) => void,
+}
+
+export const useShowDetailsModalStore = create<ShowDetailsModalStore>((set) => ({
+    isShowDetailsModalOpen: false,
+    setClose: (desiredState) => set((state) => ({ isShowDetailsModalOpen: desiredState })),
+}));
