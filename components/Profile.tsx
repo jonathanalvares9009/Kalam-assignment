@@ -5,10 +5,10 @@ import { useState } from "react"
 import SignUpComponent from "./SignUpComponent"
 import ShotDetailsModal from "./ShotDetailsModal"
 import ShareModal from "./ShareModal"
-import { useFeedbackModalStore } from "@/store/zustand"
+import { useFeedbackModalStore, useSignUpModalStore } from "@/store/zustand"
 
 const Profile = () => {
-  const [isSignUpModalOpen, setIsSignUpModalOpen] = useState(false)
+  const { isSignUpModalOpen, setClose: setIsSignUpModalOpen } = useSignUpModalStore()
   const [isShotDetailsModalOpen, setIsShotDetailsModalOpen] = useState(false)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
   const { setClose } = useFeedbackModalStore()

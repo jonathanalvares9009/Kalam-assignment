@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 type SignUpComponentProps = {
-  setCloseSignUp: React.Dispatch<React.SetStateAction<boolean>>
+  setCloseSignUp: (desiredState: boolean) => void
 }
 
 const SignUpComponent = ({setCloseSignUp}: SignUpComponentProps) => {

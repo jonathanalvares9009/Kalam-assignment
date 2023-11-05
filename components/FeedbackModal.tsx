@@ -1,4 +1,6 @@
+"use client"
 import { ACTIONS } from '@/constants';
+import { useSignUpModalStore } from '@/store/zustand';
 import Image from 'next/image';
 
 type FeedbackModalProps = {
@@ -6,6 +8,8 @@ type FeedbackModalProps = {
 }
 
 const FeedbackModal = ({setClose}: FeedbackModalProps) => {
+  const { isSignUpModalOpen, setClose: setIsSignUpModalOpen } = useSignUpModalStore()
+
   return (
     <section className='flex flex-col gap-20 absolute top-0 right-0 h-full bg-white border border-t-transparent border-b-transparent border-l-gray-300 w-4/5 sm:w-1/2 lg:w-1/4' onClick={() => setClose(false)}>
       <div className="flex gap-2 justify-center select-none">
@@ -15,7 +19,7 @@ const FeedbackModal = ({setClose}: FeedbackModalProps) => {
             }
             return <div key={index} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
               onClick={() => {
-                // if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
+                if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
                 // if (action.key === "info") setIsShotDetailsModalOpen(true)
                 // if (action.key === "share") setIsShareModalOpen(true)
               }}
