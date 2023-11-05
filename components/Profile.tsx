@@ -31,7 +31,7 @@ const Profile = () => {
       <div className="flex flex-col py-12 gap-8">
         <div className="flex gap-2 justify-center sm:hidden select-none">
           {ACTIONS.map((action, index) => (
-            <div key={index} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer"
+            <div key={index} className="p-2 rounded-full border-2 border-gray-50 cursor-pointer transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
               onClick={() => {
                 if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
                 if (action.key === "info") setIsShotDetailsModalOpen(true)

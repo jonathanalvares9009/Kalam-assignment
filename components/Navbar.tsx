@@ -62,7 +62,7 @@ const Navbar = () => {
           </ProfileTooltip>
           {ACTIONS.map((action, index) => (
             <Tooltip content={action.label} placement="left" key={index}>
-            <div key={index} className="p-2.5 rounded-full border-2 cursor-pointer border-gray-50 w-10 h-10"
+            <div key={index} className="p-2.5 rounded-full border-2 cursor-pointer border-gray-50 w-10 h-10 transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
               onClick={() => {
                 if (action.key === "heart" || action.key === "bookmark") setIsSignUpModalOpen(true)
                 if (action.key === "info") setIsShotDetailsModalOpen(true)
