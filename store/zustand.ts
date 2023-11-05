@@ -19,3 +19,13 @@ export const useSignUpModalStore = create<SignUpModalStore>((set) => ({
     isSignUpModalOpen: false,
     setClose: (desiredState) => set((state) => ({ isSignUpModalOpen: desiredState })),
 }));
+
+type ShowDemoModalStore = {
+    isShowDemoModalOpen: boolean,
+    setClose: (desiredState: boolean) => void,
+}
+
+export const useShowDemoModalStore = create<ShowDemoModalStore>((set) => ({
+    isShowDemoModalOpen: false,
+    setClose: (desiredState) => set((state) => ({ isShowDemoModalOpen: desiredState })),
+}));

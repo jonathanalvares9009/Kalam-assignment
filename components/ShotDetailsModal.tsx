@@ -2,7 +2,7 @@ import { TAGS } from '@/constants';
 import Image from 'next/image';
 
 type ShotDetailsModalProps = {
-    setClose: React.Dispatch<React.SetStateAction<boolean>>
+    setClose: (desiredState: boolean) => void
 }
 
 const ShotDetailsModal = ({setClose}: ShotDetailsModalProps) => {
