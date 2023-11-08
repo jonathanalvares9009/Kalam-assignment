@@ -143,14 +143,14 @@ const Navbar = () => {
       {isMenuOpen && (
         <div
           id="menu-links"
-          className="fixed w-full top-24 left-0 opacity-1 visible border-t-2 border-blue-100 bg-white lg:hidden"
+          className="fixed w-full top-24 left-0 opacity-1 visible border-t bg-white lg:hidden"
         >
-          <ul className="flex flex-col gap-2 justify-center px-6 py-6 bg-slate">
+          <ul className="flex flex-col gap-2 justify-center px-6 py-6 bg-slate text-sm text-blue-100 font-medium">
             {NAV_LINKS.map((link) => (
               <li key={link.key} className="mx-2">
                 <Link
                   href={link.href}
-                  className="bold-16 text-blue-100 font-bold hover:text-gray-800"
+                  className="hover:text-[#565564]"
                 >
                   {link.label}
                 </Link>
@@ -160,7 +160,7 @@ const Navbar = () => {
             <li className="mx-2">
               <Link
                 href={""}
-                className="bold-16 text-blue-100 font-bold hover:text-gray-800"
+                className="hover:text-[#565564]"
               >
                 Log in
               </Link>
