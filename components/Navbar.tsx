@@ -16,6 +16,7 @@ import {
   useShowDetailsModalStore,
   useSignUpModalStore,
 } from "@/store/zustand";
+import { MenuToggle } from "./MenuToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuIsOpen] = useState(false);
@@ -28,18 +29,14 @@ const Navbar = () => {
     useShowDetailsModalStore();
 
   return (
-    <nav className="flex justify-between relative z-1 py-5 px-4 h-24 selection:bg-yellow-50 items-center">
-      <div className="flex items-center gap-4">
-        <div
-          className={`flex flex-col h-4 w-5 justify-between normal bg-transparent lg:hidden ${
-            isMenuOpen ? "x-open" : ""
-          }`}
-          onClick={() => setMenuIsOpen(!isMenuOpen)}
-        >
-          <span className="w-full h-0.5 bg-blue-100"></span>
-          <span className="w-full h-0.5 bg-blue-100"></span>
-          <span className="w-2/3 h-0.5 bg-blue-100"></span>
-        </div>
+    <motion.nav
+      className="flex justify-between relative z-1 py-5 px-4 h-24 selection:bg-yellow-50 items-center"
+      initial={false}
+      animate={isMenuOpen ? "open" : "closed"}
+      custom="100%"
+    >
+      <div className="flex gap-4 items-baseline">
+        <MenuToggle toggle={() => setMenuIsOpen(!isMenuOpen)} />
 
         <a href="https://dribbble.com/" className="cursor-pointer">
           <svg
@@ -178,7 +175,7 @@ const Navbar = () => {
             width: 0,
             transition: { delay: 0.7, duration: 0.3 },
           }}
-          transition={{ duration: 0.15 }}
+          transition={{ duration: 0.05 }}
           id="menu-links"
           className="fixed w-full top-24 left-0 opacity-1 visible border-t bg-white lg:hidden"
         >
@@ -223,7 +220,7 @@ const Navbar = () => {
         <ShotDetailsModal setClose={setIsShotDetailsModalOpen} />
       )}
       {isShowDetailsModalOpen && <ShareModal setClose={setIsShareModalOpen} />}
-    </nav>
+    </motion.nav>
   );
 };
 
