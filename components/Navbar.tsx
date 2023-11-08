@@ -52,7 +52,7 @@ const Navbar = () => {
             <Link
               href={link.href}
               key={link.key}
-              className="text-sm text-blue-100 font-semibold flexCenter cursor-pointer pb-1.5 transition-all hover:text-[#565564]"
+              className="text-sm text-blue-100 font-semibold flexCenter cursor-pointer pb-1.5 transition-colors duration-200 ease-in-out hover:text-[#565564]"
             >
               {link.label}
             </Link>
