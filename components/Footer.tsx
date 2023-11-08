@@ -1,12 +1,24 @@
-import { FOOTER_LINKS_ONE, FOOTER_LINKS_TWO, LINKS, SOCIALS } from "@/constants"
-import Image from "next/image"
+import {
+  FOOTER_LINKS_ONE,
+  FOOTER_LINKS_TWO,
+  LINKS,
+  SOCIALS,
+} from "@/constants";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <section className='flex flex-col gap-20 pt-56 pb-8 px-8 items-center xl:px-40 sm:px-32 text-base'>
+    <section className="flex flex-col gap-20 pt-56 pb-8 px-8 items-center xl:px-40 sm:px-32 text-base">
       <div className="flex flex-col gap-5 items-center w-full laptop:flex-row md:justify-between">
-        <div className='flex flex-col items-center select-none'>
-        <a href="https://dribbble.com/" className="cursor-pointer"><Image src="/dribble-logo.svg" width={104} height={30} alt="Dribble Logo" /></a>
+        <div className="flex flex-col items-center select-none">
+          <a href="https://dribbble.com/" className="cursor-pointer">
+            <Image
+              src="/dribble-logo.svg"
+              width={104}
+              height={30}
+              alt="Dribble Logo"
+            />
+          </a>
         </div>
 
         <ul className="flex flex-wrap justify-center gap-y-1 gap-x-4 selection:bg-yellow-50 text-sm text-blue-100 font-normal xl:gap-x-10">
@@ -23,13 +35,17 @@ const Footer = () => {
           {SOCIALS.map((social, index) => (
             <li key={index}>
               <a href={social.href} className="font-medium">
-                <Image src={social.icon} width={20} height={20} alt={social.alt} />
+                <Image
+                  src={social.icon}
+                  width={20}
+                  height={20}
+                  alt={social.alt}
+                />
               </a>
             </li>
           ))}
         </ul>
       </div>
-
 
       <div className="flex flex-col gap-1 w-full xl:flex-row md:justify-between text-gray-10 text-sm font-normal selection:bg-yellow-50 selection:text-blue-100 px-4">
         <ul className="flex justify-center gap-4">
@@ -54,7 +70,7 @@ const Footer = () => {
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

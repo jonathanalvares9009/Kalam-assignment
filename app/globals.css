@@ -1,8 +1,8 @@
 @font-face {
-  font-family: 'Mona Sans';
+  font-family: "Mona Sans";
   src:
-    url('/Mona-Sans.woff2') format('woff2 supports variations'),
-    url('/Mona-Sans.woff2') format('woff2-variations');
+    url("/Mona-Sans.woff2") format("woff2 supports variations"),
+    url("/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
 }
@@ -17,14 +17,13 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  -webkit-font-feature-settings: 'ss01';
-  font-feature-settings: 'ss01';
+  -webkit-font-feature-settings: "ss01";
+  font-feature-settings: "ss01";
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -35,27 +34,26 @@ body {
   color: #0d0c22;
 }
 
-
 @layer utilities {
-  .btn_white { 
-    @apply  border-white bg-white px-8 py-3 text-green-50
+  .btn_white {
+    @apply border-white bg-white px-8 py-3 text-green-50;
   }
-  .btn_white_text  { 
-    @apply  border-white bg-white px-8 py-3 text-gray-90
+  .btn_white_text {
+    @apply border-white bg-white px-8 py-3 text-gray-90;
   }
-  .btn_green  { 
-    @apply  border-green-50 bg-green-50 px-8 py-5 text-white
+  .btn_green {
+    @apply border-green-50 bg-green-50 px-8 py-5 text-white;
   }
-  .btn_dark_blue { 
-    @apply  bg-blue-100 px-8 py-3 text-white transition-all hover:bg-black
+  .btn_dark_blue {
+    @apply bg-blue-100 px-8 py-3 text-white transition-all hover:bg-black;
   }
-  .btn_transparent { 
-    @apply  border-transparent bg-transparent px-8 py-3 text-black
+  .btn_transparent {
+    @apply border-transparent bg-transparent px-8 py-3 text-black;
   }
-  .btn_dark_green_outline  { 
-    @apply border-gray-20 bg-blue-100 px-8 py-5 text-white
+  .btn_dark_green_outline {
+    @apply border-gray-20 bg-blue-100 px-8 py-5 text-white;
   }
-  
+
   .max-container {
     @apply mx-auto max-w-[1440px];
   }

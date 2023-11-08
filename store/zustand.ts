@@ -1,41 +1,47 @@
-import { create } from 'zustand'
+import { create } from "zustand";
 
 type FeedbackModalStore = {
-    isFeedbackModalOpen: boolean,
-    setClose: (desiredState: boolean) => void,
-}
+  isFeedbackModalOpen: boolean;
+  setClose: (desiredState: boolean) => void;
+};
 
 export const useFeedbackModalStore = create<FeedbackModalStore>((set) => ({
-    isFeedbackModalOpen: false,
-    setClose: (desiredState) => set((state) => ({ isFeedbackModalOpen: desiredState })),
+  isFeedbackModalOpen: false,
+  setClose: (desiredState) =>
+    set((state) => ({ isFeedbackModalOpen: desiredState })),
 }));
 
 type SignUpModalStore = {
-    isSignUpModalOpen: boolean,
-    setClose: (desiredState: boolean) => void,
-}
+  isSignUpModalOpen: boolean;
+  setClose: (desiredState: boolean) => void;
+};
 
 export const useSignUpModalStore = create<SignUpModalStore>((set) => ({
-    isSignUpModalOpen: false,
-    setClose: (desiredState) => set((state) => ({ isSignUpModalOpen: desiredState })),
+  isSignUpModalOpen: false,
+  setClose: (desiredState) =>
+    set((state) => ({ isSignUpModalOpen: desiredState })),
 }));
 
 type ShowDemoModalStore = {
-    isShowDemoModalOpen: boolean,
-    setClose: (desiredState: boolean) => void,
-}
+  isShowDemoModalOpen: boolean;
+  setClose: (desiredState: boolean) => void;
+};
 
 export const useShowDemoModalStore = create<ShowDemoModalStore>((set) => ({
-    isShowDemoModalOpen: false,
-    setClose: (desiredState) => set((state) => ({ isShowDemoModalOpen: desiredState })),
+  isShowDemoModalOpen: false,
+  setClose: (desiredState) =>
+    set((state) => ({ isShowDemoModalOpen: desiredState })),
 }));
 
 type ShowDetailsModalStore = {
-    isShowDetailsModalOpen: boolean,
-    setClose: (desiredState: boolean) => void,
-}
+  isShowDetailsModalOpen: boolean;
+  setClose: (desiredState: boolean) => void;
+};
 
-export const useShowDetailsModalStore = create<ShowDetailsModalStore>((set) => ({
+export const useShowDetailsModalStore = create<ShowDetailsModalStore>(
+  (set) => ({
     isShowDetailsModalOpen: false,
-    setClose: (desiredState) => set((state) => ({ isShowDetailsModalOpen: desiredState })),
-}));
+    setClose: (desiredState) =>
+      set((state) => ({ isShowDetailsModalOpen: desiredState })),
+  }),
+);
