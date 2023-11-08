@@ -15,7 +15,7 @@ const Profile = () => {
   const { setClose } = useFeedbackModalStore();
 
   return (
-    <section className="flex flex-col gap-8 px-4 sm:px-32 justify-center selection:bg-yellow-50">
+    <section className="flex flex-col gap-8 px-4 sm:px-32 justify-center text-lg text-blue-100 font-normal selection:bg-yellow-50">
       <div className="flex flex-col gap-8 text-xl font-normal lg:pl-56 lg:pb-20">
         <p>Hello folks!</p>
         <p>Wemsc is a music streaming platform to accompany you every time.</p>
@@ -71,7 +71,7 @@ const Profile = () => {
           ))}
         </div>
 
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col gap-4 items-center w-full">
           <div className="flex gap-4 w-full items-center select-none">
             <span className="border border-gray-50 w-full"></span>
             <a
@@ -90,7 +90,7 @@ const Profile = () => {
           </div>
           <a
             href="https://dribbble.com/nailulizah"
-            className="font-bold text-xl"
+            className="font-medium text-xl text-blue-100"
           >
             Nailul Izah
           </a>
