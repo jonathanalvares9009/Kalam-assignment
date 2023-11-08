@@ -167,54 +167,71 @@ const Navbar = () => {
         </div>
       )}
 
-<AnimatePresence>
-      {isMenuOpen && (
-        
+      <AnimatePresence>
+        {isMenuOpen && (
           <motion.aside
-          key="menu"
-          initial={{ width: 0 }}
-          animate={{ opacity: 1, width: ["30%", "100%"] }}
-          exit={{
-            opacity: 0,
-            width: ["100%", "30%"],
-          }}
+            key="menu"
+            variants={{
+              hidden: {
+                opacity: 0,
+                transition: {
+                  duration: 0.25, // 250ms
+                  ease: "easeOut",
+                },
+              },
+              visible: {
+                opacity: 1,
+                transition: { duration: 0.25, ease: "easeOut" },
+              },
+            }}
+            animate={{
+              backgroundColor: "#fff",
+            }}
+            exit={{
+              backgroundColor: "#fff",
+            }}
             id="menu-links"
             className="fixed w-full top-24 left-0 opacity-1 visible border-t bg-white lg:hidden"
           >
-          <motion.ul
-            variants={{
-              closed: {
-                transition: {
-                  staggerChildren: 0.2,
-                  staggerDirection: -1,
+            <motion.ul
+              className="flex flex-col gap-2 justify-center px-6 py-6 bg-slate text-sm text-blue-100 font-medium"
+              variants={{
+                hidden: { opacity: 0 },
+                visible: {
+                  opacity: 1,
+
+                  transition: {
+                    staggerChildren: 0.2, // delay between each child animation
+                    staggerDirection: 1, // stagger from first to last child
+                  },
                 },
-              },
-              open: {
-                transition: {
-                  staggerChildren: 0.2,
-                  staggerDirection: 1,
-                },
-              },
-            }}
-            className="flex flex-col gap-2 justify-center px-6 py-6 bg-slate text-sm text-blue-100 font-medium"
-          >
-            {NAV_LINKS.map((link) => (
-              <motion.li key={link.key} className="mx-2">
-                <Link href={link.href} className="hover:text-[#565564]">
-                  {link.label}
+              }}
+            >
+              {NAV_LINKS.map((link) => (
+                <motion.li
+                  key={link.key}
+                  className="mx-2"
+                  initial={{ opacity: 0, translateX: -50 }} // start slightly to the left
+                  animate={{ opacity: 1, translateX: 0 }}
+                >
+                  <Link href={link.href} className="hover:text-[#565564]">
+                    {link.label}
+                  </Link>
+                </motion.li>
+              ))}
+              <hr />
+              <motion.li
+                className="mx-2 transition-all transition-duration-200 transition-timing-function-custom"
+                initial={{ opacity: 0, translateX: -5 }} // start slightly to the left
+                animate={{ opacity: 1, translateX: 0 }}
+              >
+                <Link href={""} className="hover:text-[#565564]">
+                  Log in
                 </Link>
               </motion.li>
-            ))}
-            <hr />
-            <motion.li className="mx-2">
-              <Link href={""} className="hover:text-[#565564]">
-                Log in
-              </Link>
-            </motion.li>
-          </motion.ul>
-        </motion.aside>
-        
-      )}
+            </motion.ul>
+          </motion.aside>
+        )}
       </AnimatePresence>
 
       {isSignUpModalOpen && (
