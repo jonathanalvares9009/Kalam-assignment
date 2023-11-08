@@ -6,7 +6,7 @@ import {
   useSignUpModalStore,
 } from "@/store/zustand";
 import Image from "next/image";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 type FeedbackModalProps = {
   setClose: (argument: boolean) => void;

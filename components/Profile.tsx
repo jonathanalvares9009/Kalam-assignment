@@ -6,7 +6,7 @@ import SignUpComponent from "./SignUpComponent";
 import ShotDetailsModal from "./ShotDetailsModal";
 import ShareModal from "./ShareModal";
 import { useFeedbackModalStore, useSignUpModalStore } from "@/store/zustand";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 
 const Profile = () => {
   const { isSignUpModalOpen, setClose: setIsSignUpModalOpen } =
