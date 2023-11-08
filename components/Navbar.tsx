@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Tooltip } from "@material-tailwind/react";
 import Button from "./Button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import ProfileTooltip from "./ProfileTooltip";
 import SignUpComponent from "./SignUpComponent";
@@ -167,18 +167,20 @@ const Navbar = () => {
         </div>
       )}
 
+<AnimatePresence>
       {isMenuOpen && (
-        <motion.aside
+        
+          <motion.aside
+          key="menu"
           initial={{ width: 0 }}
-          animate={{ width: "100%" }}
+          animate={{ opacity: 1, width: ["30%", "100%"] }}
           exit={{
-            width: 0,
-            transition: { delay: 0.7, duration: 0.3 },
+            opacity: 0,
+            width: ["100%", "30%"],
           }}
-          transition={{ duration: 0.05 }}
-          id="menu-links"
-          className="fixed w-full top-24 left-0 opacity-1 visible border-t bg-white lg:hidden"
-        >
+            id="menu-links"
+            className="fixed w-full top-24 left-0 opacity-1 visible border-t bg-white lg:hidden"
+          >
           <motion.ul
             variants={{
               closed: {
@@ -211,7 +213,9 @@ const Navbar = () => {
             </motion.li>
           </motion.ul>
         </motion.aside>
+        
       )}
+      </AnimatePresence>
 
       {isSignUpModalOpen && (
         <SignUpComponent setCloseSignUp={setIsSignUpModalOpen} />
