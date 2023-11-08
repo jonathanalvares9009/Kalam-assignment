@@ -62,7 +62,7 @@ const Hero = () => {
         width={400}
         alt="Hero"
         className="w-full select-none cursor-pointer sm:w-3/5"
-        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(400, 300))}`}
         unoptimized={true}
         onClick={() => setIsShowDemoModalOpen(true)}
       />

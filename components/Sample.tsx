@@ -34,7 +34,7 @@ const Sample = ({ src, alt, label, href }: SampleProps) => {
         width={80}
         height={80}
         className="w-full rounded-lg"
-        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(700, 475))}`}
+        placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(80, 80))}`}
         unoptimized={true}
       />
       {isHovered && (
