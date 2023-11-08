@@ -6,6 +6,7 @@ import SignUpComponent from "./SignUpComponent";
 import ShotDetailsModal from "./ShotDetailsModal";
 import ShareModal from "./ShareModal";
 import { useFeedbackModalStore, useSignUpModalStore } from "@/store/zustand";
+import {motion} from "framer-motion";
 
 const Profile = () => {
   const { isSignUpModalOpen, setClose: setIsSignUpModalOpen } =
@@ -49,7 +50,7 @@ const Profile = () => {
       <div className="flex flex-col py-12 gap-8">
         <div className="flex gap-2 justify-center sm:hidden select-none">
           {ACTIONS.map((action, index) => (
-            <div
+            <motion.div
               key={index}
               className="p-2 rounded-full border-2 border-gray-50 cursor-pointer transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
               onClick={() => {
@@ -59,6 +60,8 @@ const Profile = () => {
                 if (action.key === "share") setIsShareModalOpen(true);
                 if (action.key === "feedback") setClose(true);
               }}
+              whileHover={{ borderColor: "#dbdbde" }}
+              transition={{ duration: 0.15, ease: [0.32, 0, 0.59, 0.03] }}
             >
               <Image
                 src={action.src}
@@ -67,7 +70,7 @@ const Profile = () => {
                 alt={action.key}
                 key={action.key}
               />
-            </div>
+            </motion.div>
           ))}
         </div>
 

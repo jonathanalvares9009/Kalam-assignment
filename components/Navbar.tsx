@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Tooltip } from "@material-tailwind/react";
 import Button from "./Button";
-
+import {motion} from "framer-motion";
 import { useState } from "react";
 import ProfileTooltip from "./ProfileTooltip";
 import SignUpComponent from "./SignUpComponent";
@@ -116,7 +116,7 @@ const Navbar = () => {
           </ProfileTooltip>
           {ACTIONS.map((action, index) => (
             <Tooltip content={action.label} placement="left" key={index}>
-              <div
+              <motion.div
                 key={index}
                 className="p-2.5 rounded-full border-2 cursor-pointer border-gray-50 w-10 h-10 transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
                 onClick={() => {
@@ -126,6 +126,8 @@ const Navbar = () => {
                   if (action.key === "share") setIsShareModalOpen(true);
                   if (action.key === "feedback") setClose(true);
                 }}
+                whileHover={{ borderColor: "#dbdbde" }}
+                transition={{ duration: 0.15, ease: [0.32, 0, 0.59, 0.03] }}
               >
                 <Image
                   src={action.src}
@@ -134,7 +136,7 @@ const Navbar = () => {
                   alt={action.key}
                   key={action.key}
                 />
-              </div>
+              </motion.div>
             </Tooltip>
           ))}
         </div>

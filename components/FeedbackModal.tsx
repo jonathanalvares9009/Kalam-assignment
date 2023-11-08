@@ -6,6 +6,7 @@ import {
   useSignUpModalStore,
 } from "@/store/zustand";
 import Image from "next/image";
+import {motion} from "framer-motion";
 
 type FeedbackModalProps = {
   setClose: (argument: boolean) => void;
@@ -24,15 +25,17 @@ const FeedbackModal = ({ setClose }: FeedbackModalProps) => {
             return <div key={action.key} className="w-12 h-4"></div>;
           }
           return (
-            <div
+            <motion.div
               key={action.key}
-              className="p-2 rounded-full border-2 border-gray-50 cursor-pointer transition-all duration-150 cubic-bezier[0.32 0 0.59 0.03]"
+              className="p-2 rounded-full border-2 border-gray-50 cursor-pointer"
               onClick={() => {
                 if (action.key === "heart" || action.key === "bookmark")
                   setIsSignUpModalOpen(true);
                 if (action.key === "info") setIsShotDetailsModalOpen(true);
                 if (action.key === "share") setIsShareModalOpen(true);
               }}
+              whileHover={{ borderColor: "#dbdbde" }}
+              transition={{ duration: 0.15, ease: [0.32, 0, 0.59, 0.03] }}
             >
               <Image
                 src={action.src}
@@ -41,7 +44,7 @@ const FeedbackModal = ({ setClose }: FeedbackModalProps) => {
                 alt={action.key}
                 key={action.key}
               />
-            </div>
+            </motion.div>
           );
         })}
       </div>
